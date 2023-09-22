@@ -147,7 +147,8 @@ if (document.URL.substring(0, dsturl1.length) == dsturl1) {
 						if (coachSpecials.length != 0) {
 							for (j = 0; j < coachSpecials.length; j++) {
 								name = $(coachSpecials[j]).attr('class');
-								if (name == 'btn_small btn_burgundy_dark val_m wx90') {
+								var text = $(coachSpecials[j]).text()
+								if (name == 'btn_small btn_burgundy_dark val_m wx90' && text == '예약하기') {
 									$(coachSpecials[0])[0].click();
 									succeed = true;
 									break;
@@ -161,8 +162,10 @@ if (document.URL.substring(0, dsturl1.length) == dsturl1) {
 						var firstSpecials = first.children("a");
 						if (firstSpecials.length != 0) {
 							for (j = 0; j < firstSpecials.length; j++) {
-								name = $(firstSpecials[j]).attr('class');
-								if (name == 'btn_small btn_burgundy_dark val_m wx90') {
+								let firstSpecial = firstSpecials[j];
+								name = $(firstSpecial).attr('class');
+								var text =$(firstSpecial).text();
+								if (name == 'btn_small btn_burgundy_dark val_m wx90' && text == '예약하기') {
 									$(firstSpecials[0])[0].click();
 									succeed = true;
 									break;
@@ -177,7 +180,8 @@ if (document.URL.substring(0, dsturl1.length) == dsturl1) {
 						if (waitingSpecials.length != 0) {
 							for (j = 0; j < waitingSpecials.length; j++) {
 								name = $(waitingSpecials[j]).attr('class');
-								if (name == 'btn_small btn_burgundy_dark val_m wx90') {
+								var text =$(firstSpecial).text();
+								if (name == 'btn_small btn_burgundy_dark val_m wx90' && text == '예약하기') {
 									$(waitingSpecials[0])[0].click();
 									succeed = true;
 									break;
